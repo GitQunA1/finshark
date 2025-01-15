@@ -191,3 +191,4 @@ C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\refint\ap
 C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\api.pdb
 C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\api.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\ref\api.dll
+C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\api.sourcelink.json
