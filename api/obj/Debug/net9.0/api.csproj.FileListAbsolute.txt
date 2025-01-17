@@ -192,3 +192,7 @@ C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\api.pdb
 C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\api.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\ref\api.dll
 C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\obj\Debug\net9.0\api.sourcelink.json
+C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\LENOVO\Desktop\VSCode_Git\FINSHARK_Teddy\api\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
