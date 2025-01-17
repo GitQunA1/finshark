@@ -18,7 +18,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddScoped<IStockRepositoty, StockRepository>();
+builder.Services.AddScoped<IStockRepositoty, StockRepository>();  //dependence injection
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();  //kh thêm maybe vẫn hđộng đc nhưng thêm vào để cho chắc
 
 var app = builder.Build();
 
