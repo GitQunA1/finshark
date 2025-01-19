@@ -50,9 +50,10 @@ namespace api.Repository
             return await _context.Stocks.Include(c => c.Comments).FirstOrDefaultAsync(i => i.Id == id);
         }
 
-        public Task<bool> StockExists(int id)  //check lại xem method này cần Async kh?
+        public Task<bool> StockExists(int id)  
         {
-            return _context.Stocks.AnyAsync(s => s.Id == id);
+            return _context.Stocks.AnyAsync(s => s.Id == id);  
+            //AnyAsync() đã trả về Task<bool>, kh có thêm logic nào cần xử lí, hàm chỉ cần trả kq trực tiếp từ phương thức bất đồng bộ
         }
 
         public async Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto stockDto)
