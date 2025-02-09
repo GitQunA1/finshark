@@ -57,13 +57,15 @@ namespace api.Repository
 
             if(!string.IsNullOrWhiteSpace(query.SortBy))
             {
-                if(query.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase))
+                if(query.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase)) //so sánh kể cả hoa hay thường
                 {
-                    stocks = query.IsDecsending ? stocks.OrderByDescending(s => s.Symbol) : stocks.OrderBy(s => s.Symbol);
+                    stocks = query.IsDecsending ? stocks.OrderByDescending(s => s.Symbol) : stocks.OrderBy(s => s.Symbol);  //toán tử 3 ngôi, nếu condition true thì thực hiện vế đầu, false thực hiện vế sau
                 }
             }
 
-            return await stocks.ToListAsync();
+            var skipNumber = (query.PageNumber -1) * query.PageSize;
+
+            return await stocks.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
         public async Task<Stock?> GetByIdAsync(int id)
