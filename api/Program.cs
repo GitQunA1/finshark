@@ -1,7 +1,9 @@
+using System.Text;
 using api.Data;
 using api.Interfaces;
 using api.Models;
 using api.Repository;
+using api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -58,6 +60,12 @@ builder.Services.AddAuthentication(options => {
 
 builder.Services.AddScoped<IStockRepositoty, StockRepository>();  //dependence injection
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();  //kh thêm maybe vẫn hđộng đc nhưng thêm vào để cho chắc
+builder.Services.AddScoped<ITokenService, TokenService>(sp => 
+{
+    var config = sp.GetRequiredService<IConfiguration>();
+    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:SigningKey"]));
+    return new TokenService(config, key);
+});
 
 var app = builder.Build();
 
