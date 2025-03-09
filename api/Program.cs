@@ -89,6 +89,7 @@ builder.Services.AddAuthentication(options => {
 
 builder.Services.AddScoped<IStockRepositoty, StockRepository>();  //dependence injection
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();  //kh thêm maybe vẫn hđộng đc nhưng thêm vào để cho chắc
+builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>(sp => 
 {
     var config = sp.GetRequiredService<IConfiguration>();
