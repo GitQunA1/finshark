@@ -96,6 +96,9 @@ builder.Services.AddScoped<ITokenService, TokenService>(sp =>
     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:SigningKey"]));
     return new TokenService(config, key);
 });
+builder.Services.AddScoped<IFMPService, FMPService>();
+builder.Services.AddHttpClient<IFMPService, FMPService>();
+
 
 var app = builder.Build();
 
